@@ -6,6 +6,18 @@ You'll also need to have the MySQL database already set up on your machine in or
 
 ## Customer Interface
 The customer interface allows the user to view the current inventory of store items: item IDs, descriptions, department in which the item is located and price. The user is then able to purchase one of the existing items by entering the item ID and the desired quantity. If the selected quantity is currently in stock, the user's order is fulfilled, displaying the total purchase price and updating the store database. If the desired quantity is not available, the user is prompted to modify their order.
+When you launch the customer interface, before placing your order, you will see a table with the products currently available for purchase (see image below):
+![Products table](https://github.com/hmurali/bamazon/blob/master/bamazonCustomerDisplayProducts.PNG)
+
+The below image illustrates what happens when you place an order successfully:
+![Success purchase](https://github.com/hmurali/bamazon/blob/master/bamazonCustomerPurchaseOrderSuccess.PNG)
+
+The below image illustrates what happens when you specify a quantity greater than the current stock of the specified item:
+![Unsuccessful purchase](https://github.com/hmurali/bamazon/blob/master/bamazonCustomerPurchaseOrderInsufficientQuantity.PNG)
 
 ## Manager Interface
-The manager interface presents a list of four options, as below.
+The manager interface presents a list of three options, as below.
+1. ![Inventory options](https://github.com/hmurali/bamazon/blob/master/bamazonManagerManageInventoryOptions.PNG)
+1. ![Restock Inventory](https://github.com/hmurali/bamazon/blob/master/bamazonManagerRestockInventory.PNG)
+1. ![Add New Product](https://github.com/hmurali/bamazon/blob/master/bamazonManagerAddNewProduct.PNG)
+1. ![Remove an Existing Product](https://github.com/hmurali/bamazon/blob/master/bamazonManagerRemoveExistingProduct.PNG)
