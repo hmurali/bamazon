@@ -10,7 +10,7 @@ create table products(
 );
 
 select * from products;
-
+/*update Products set stock_quantity = 30 where item_id = 400;*/
 insert into products (item_id, product_name, department_name, price, stock_quantity)
 values (100, "tshirts", "clothing", 5.99, 20),
 		(200, "shoes", "footwear", 60.00, 18),
