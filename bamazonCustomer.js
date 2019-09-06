@@ -60,7 +60,15 @@ function purchaseOrder(ID, amtNeeded){
             console.log("Good news your order is in stock!");
             console.log("Your total cost for " + amtNeeded + " " + res[0].product_name + " is " + totalCost + " Thank you!");
 
-            connection.query("Update products set stock_quantity = stock_quantity - " + amtNeeded + "where item_id = " + ID);
+            connection.query("Update products set ? where ? ",
+            [
+                {
+                    amtNeeded: res[0].stock_quantity - amtNeeded
+                },
+                {
+                    ID: res[0].item_id
+                }
+            ]);
         } else{
             console.log("Insufficient quantity, sorry we do not have enough " + res[0].product_name + "to complete your order.");
         };
