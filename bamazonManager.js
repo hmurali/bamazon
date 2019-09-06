@@ -128,7 +128,7 @@ function addRequest(){
     });
 };
 
-function addNewProduct(name, category, price, quantity){
+function addNewProduct(id, name, category, price, quantity){
     connection.query('INSERT INTO Products (item_id,product_name,department_name,price,stock_quantity) VALUES("' + id + '","' + name + '","' + category + '","' + price + '","' + quantity + ')');
     showInventory();
 };
