@@ -66,7 +66,7 @@ function purchaseOrder(ID, amtNeeded){
                     amtNeeded: res[0].stock_quantity - amtNeeded
                 },
                 {
-                    ID: res[0].item_id
+                    item_id: ID
                 }
             ]);
         } else{
