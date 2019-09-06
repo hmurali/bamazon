@@ -129,7 +129,14 @@ function addRequest(){
 };
 
 function addNewProduct(id, name, category, price, quantity){
-    connection.query('INSERT INTO Products (item_id,product_name,department_name,price,stock_quantity) VALUES("' + id + '","' + name + '","' + category + '","' + price + '","' + quantity + ')');
+    connection.query('INSERT INTO Products SET ?',
+    {
+        item_id: id,
+        product_name: name,
+        department_name: category,
+        price: price,
+        stock_quantity: quantity
+    });
     showInventory();
 };
 
