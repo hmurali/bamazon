@@ -63,7 +63,7 @@ function purchaseOrder(ID, amtNeeded){
             connection.query("Update products set ? where ? ",
             [
                 {
-                    amtNeeded: res[0].stock_quantity - amtNeeded
+                    stock_quantity: res[0].stock_quantity - amtNeeded
                 },
                 {
                     item_id: ID
