@@ -56,12 +56,14 @@ function restockRequest(){
         {
             name:"ID",
             type:"input",
-            message:"What is the item number of the item you would like to restock?"
+            message:"What is the item number of the item you would like to restock?",
+            filter: Number
         },
         {
             name:"Quantity",
             type:"input",
-            message:"What is the quantity you would like to add?"
+            message:"What is the quantity you would like to add?",
+            filter: Number
         },
     ]).then(function(answers){
         var quantityAdded = answers.Quantity;
