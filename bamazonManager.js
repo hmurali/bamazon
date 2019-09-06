@@ -73,7 +73,15 @@ function restockRequest(){
 function restockInventory(id, quant){
     connection.query('SELECT * FROM Products WHERE item_id = '+id, function(err, res){
         if(err){console.log(err)};
-        connection.query('UPDATE Products SET stock_quantity = stock_quantity + ' +quant+ 'WHERE item_id =' +item_id);
+        connection.query('UPDATE Products SET ? WHERE ?',
+        [
+            {
+                stock_quantity: res[0].stock_quantity + quant
+            },
+            {
+                item_id: id
+            }
+        ]);
 
         showInventory();
     });
