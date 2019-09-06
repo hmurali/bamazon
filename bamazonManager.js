@@ -94,7 +94,8 @@ function addRequest(){
         {
             name: "ID",
             type: "input",
-            message: "Add ID Number"
+            message: "Add ID Number",
+            filter: Number
         },
         {
             name: "Name",
@@ -114,7 +115,8 @@ function addRequest(){
         {
             name: "Quantity",
             type: "input",
-            message: "What is the quantity you would like to add?"
+            message: "What is the quantity you would like to add?",
+            filter: Number
         },
     ]).then(function(answers){
         var id = answers.ID;
